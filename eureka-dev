@@ -1,0 +1,11 @@
+##单机版的情况,eureka集群可以注册和获取可以为false
+#eureka service不需要获取eureke注册信息
+eureka.client.fetch-registry=false
+#eureka service不需要注册在eureke里面
+eureka.client.register-with-eureka=false
+##其余节点信息
+eureka.client.service-url.defaultZone=http://eureka1:7001/eureka,http://eureka2:7002/eureka,http://eureka3:7003/eureka
+#设置清理的间隔时间，而后这个时间使用的是毫秒单位（默认是60秒）
+eureka.server.eviction-interval-timer-in-ms=10000
+#设置为false表示关闭保护模式
+eureka.server.enable-self-preservation:true 
